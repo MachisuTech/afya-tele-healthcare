@@ -37,10 +37,10 @@
             text-decoration: underline;
         }
         .hero {
-            background: linear-gradient(rgba(0, 119, 182, 0.8), rgba(0, 180, 216, 0.8)), url('https://via.placeholder.com/1200x400') center/cover;
+            background: linear-gradient(rgba(0, 119, 182, 0.85), rgba(0, 180, 216, 0.85)), url('nurse-care.jpg') center/cover;
             color: white;
             text-align: center;
-            padding: 4rem 1rem;
+            padding: 5rem 1rem;
         }
         .hero h2 {
             font-size: 2.5rem;
@@ -82,12 +82,42 @@
         .card {
             background: white;
             border-radius: 8px;
-            padding: 2rem;
+            padding: 1.5rem;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 1rem;
         }
         .card h3 {
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             color: #0077b6;
+        }
+        .about-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .about-img {
+            flex: 1;
+            min-width: 280px;
+        }
+        .about-img img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .about-text {
+            flex: 1;
+            min-width: 280px;
         }
         form {
             display: flex;
@@ -128,6 +158,7 @@
         <h1>Afya Tele Healthcare</h1>
         <nav>
             <a href="#services">Services</a>
+            <a href="#palliative">Palliative Care</a>
             <a href="#find-care">Find Care</a>
             <a href="#apply">Join Our Team</a>
         </nav>
@@ -146,12 +177,34 @@
         <h2 class="section-title">Our Healthcare Services</h2>
         <div class="services-grid">
             <div class="card">
+                <img src="nurse-care.jpg" alt="Nurse giving home care to a patient">
                 <h3>Registered Nurses (RN)</h3>
-                <p>Professional nursing care including wound management, medication administration, post-operative support, and health monitoring at home.</p>
+                <p>Professional nursing care including wound management, medication administration, post-operative support, and daily health monitoring at home.</p>
             </div>
             <div class="card">
-                <h3>Certified Nurse Assistants (CNA)</h3>
-                <p>Dedicated assistance with daily living activities, mobility support, personal hygiene, and compassionate companionship.</p>
+                <img src="aged-care.jpg" alt="Health and Aged Care">
+                <h3>Health & Aged Care</h3>
+                <p>Dedicated assistance with daily living activities, elderly care, mobility support, personal hygiene, and compassionate companionship.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="palliative">
+        <h2 class="section-title">Comprehensive Palliative Care</h2>
+        <div class="about-section">
+            <div class="about-img">
+                <img src="palliative-care.jpg" alt="Palliative Care Perception vs Reality Diagram">
+            </div>
+            <div class="about-text">
+                <h3>Restoring Dignity & Comfort</h3>
+                <p>Palliative care is much more than end-of-life care. We focus on holistic support for patients and families, including:</p>
+                <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                    <li>Pain relief and symptom management</li>
+                    <li>Empathetic communication</li>
+                    <li>Family & caregiver support</li>
+                    <li>Psycho-socio-spiritual support</li>
+                    <li>Community support & dignity restoration</li>
+                </ul>
             </div>
         </div>
     </div>
