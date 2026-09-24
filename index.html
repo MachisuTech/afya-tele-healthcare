@@ -3,249 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Afya Tele Healthcare | Home-Based Caregivers</title>
+    <title>Afya Tele Healthcare</title>
     <style>
+        /* Base & Reset Styles */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
         body {
-            line-height: 1.6;
+            background-color: #f4f7f6;
             color: #333;
-            background-color: #f8f9fa;
+            line-height: 1.6;
         }
+
+        /* Header & Navigation */
         header {
             background-color: #0077b6;
-            color: white;
-            padding: 1.5rem 2rem;
+            color: #fff;
+            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+
         header h1 {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
         }
+
         nav a {
-            color: white;
+            color: #fff;
             text-decoration: none;
             margin-left: 1.5rem;
-            font-weight: 600;
+            font-weight: 500;
         }
-        nav a:hover {
-            text-decoration: underline;
-        }
+
+        /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 119, 182, 0.85), rgba(0, 180, 216, 0.85)), url('nurse-care.jpg') center/cover;
-            color: white;
+            background: linear-gradient(rgba(0, 119, 182, 0.8), rgba(0, 119, 182, 0.8)), url('./images/hero.jpg') center/cover no-repeat;
+            color: #fff;
             text-align: center;
-            padding: 5rem 1rem;
+            padding: 4rem 1rem;
         }
+
         .hero h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
+
         .hero p {
             font-size: 1.2rem;
-            margin-bottom: 2rem;
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
         }
-        .cta-buttons a {
-            display: inline-block;
-            background-color: #00b4d8;
-            color: white;
-            padding: 0.8rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            margin: 0.5rem;
-            font-weight: bold;
-        }
-        .cta-buttons a.secondary {
-            background-color: #90e0ef;
-            color: #0077b6;
-        }
+
+        /* Container Layout */
         .container {
             max-width: 1100px;
-            margin: 3rem auto;
+            margin: 2rem auto;
             padding: 0 1rem;
         }
-        .section-title {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: #0077b6;
-        }
-        .services-grid {
+
+        .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
         }
+
+        /* Card Styles */
         .card {
-            background: white;
-            border-radius: 8px;
+            background: #fff;
             padding: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
         .card img {
             width: 100%;
-            height: 220px;
+            height: 200px;
             object-fit: cover;
             border-radius: 6px;
             margin-bottom: 1rem;
         }
+
         .card h3 {
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.5rem;
             color: #0077b6;
         }
-        .about-section {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 2rem;
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .about-img {
-            flex: 1;
-            min-width: 280px;
-        }
-        .about-img img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        .about-text {
-            flex: 1;
-            min-width: 280px;
-        }
+
+        /* Form Styling */
         form {
             display: flex;
             flex-direction: column;
             gap: 1rem;
         }
-        input, select, textarea {
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
             padding: 0.8rem;
             border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 1rem;
         }
-        button {
+
+        button[type="submit"] {
             background-color: #0077b6;
-            color: white;
+            color: #fff;
             border: none;
-            padding: 1rem;
+            padding: 0.8rem 1.5rem;
             font-size: 1rem;
             border-radius: 4px;
             cursor: pointer;
-            font-weight: bold;
+            transition: background-color 0.30s ease;
         }
-        button:hover {
-            background-color: #0096c7;
+
+        button[type="submit"]:hover {
+            background-color: #005f92;
         }
+
+        /* Footer */
         footer {
-            background-color: #03045e;
-            color: white;
+            background-color: #023e8a;
+            color: #fff;
             text-align: center;
-            padding: 2rem;
+            padding: 1.5rem 1rem;
             margin-top: 3rem;
         }
     </style>
 </head>
 <body>
 
+    <!-- Main Navigation Header -->
     <header>
         <h1>Afya Tele Healthcare</h1>
         <nav>
             <a href="#services">Services</a>
-            <a href="#palliative">Palliative Care</a>
-            <a href="#find-care">Find Care</a>
-            <a href="#apply">Join Our Team</a>
+            <a href="#apply">Apply</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
+    <!-- Hero Banner -->
     <section class="hero">
-        <h2>Compassionate Home-Based Healthcare</h2>
-        <p>Connecting families with qualified nurses and certified nurse assistants on demand.</p>
-        <div class="cta-buttons">
-            <a href="#find-care">Request a Caregiver</a>
-            <a href="#apply" class="secondary">Apply as a Nurse</a>
-        </div>
+        <h2>Quality Home Healthcare Services</h2>
+        <p>Connecting certified nurses and healthcare professionals directly to patients in need.</p>
     </section>
 
-    <div class="container" id="services">
-        <h2 class="section-title">Our Healthcare Services</h2>
-        <div class="services-grid">
+    <!-- Main Content Container -->
+    <div class="container">
+        
+        <!-- Services Section -->
+        <h2 id="services" style="text-align: center; margin-bottom: 1.5rem; color: #023e8a;">Our Services</h2>
+        <div class="grid">
             <div class="card">
-                <img src="nurse-care.jpg" alt="Nurse giving home care to a patient">
-                <h3>Registered Nurses (RN)</h3>
-                <p>Professional nursing care including wound management, medication administration, post-operative support, and daily health monitoring at home.</p>
+                <!-- Ensure images exist in your GitHub repository inside an 'images' folder -->
+                <img src="./images/nurse.jpg" alt="Home Care Assistance">
+                <h3>Home Nursing Care</h3>
+                <p>Personalized medical assistance, medication management, and daily home monitoring by certified healthcare providers.</p>
             </div>
             <div class="card">
-                <img src="aged-care.jpg" alt="Health and Aged Care">
-                <h3>Health & Aged Care</h3>
-                <p>Dedicated assistance with daily living activities, elderly care, mobility support, personal hygiene, and compassionate companionship.</p>
+                <img src="./images/telehealth.jpg" alt="Telehealth Consultation">
+                <h3>Telehealth Consultation</h3>
+                <p>Virtual medical appointments connecting you directly with qualified healthcare practitioners anytime, anywhere.</p>
             </div>
         </div>
-    </div>
 
-    <div class="container" id="palliative">
-        <h2 class="section-title">Comprehensive Palliative Care</h2>
-        <div class="about-section">
-            <div class="about-img">
-                <img src="palliative-care.jpg" alt="Palliative Care Perception vs Reality Diagram">
-            </div>
-            <div class="about-text">
-                <h3>Restoring Dignity & Comfort</h3>
-                <p>Palliative care is much more than end-of-life care. We focus on holistic support for patients and families, including:</p>
-                <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
-                    <li>Pain relief and symptom management</li>
-                    <li>Empathetic communication</li>
-                    <li>Family & caregiver support</li>
-                    <li>Psycho-socio-spiritual support</li>
-                    <li>Community support & dignity restoration</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="container" id="find-care">
-        <h2 class="section-title">Request Caregiver Services</h2>
-        <div class="card">
-            <form action="#">
-                <input type="text" placeholder="Your Full Name" required>
-                <input type="email" placeholder="Your Email Address" required>
-                <input type="tel" placeholder="Phone Number" required>
-                <select required>
-                    <option value="" disabled selected>Select Caregiver Needed</option>
+        <!-- Application / Registration Form -->
+        <h2 id="apply" style="text-align: center; margin-bottom: 1.5rem; color: #023e8a;">Join Our Healthcare Team</h2>
+        <div class="card" style="max-width: 600px; margin: 0 auto;">
+            <form action="#" method="POST">
+                <input type="text" name="fullname" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                
+                <select name="qualification" required>
+                    <option value="" disabled selected>Select Your Qualification</option>
                     <option value="rn">Registered Nurse (RN)</option>
                     <option value="cna">Certified Nurse Assistant (CNA)</option>
+                    <option value="co">Clinical Officer</option>
                 </select>
-                <textarea rows="4" placeholder="Describe your healthcare needs or details..." required></textarea>
-                <button type="submit">Submit Request</button>
-            </form>
-        </div>
-    </div>
-
-    <div class="container" id="apply">
-        <h2 class="section-title">Apply as a Caregiver</h2>
-        <div class="card">
-            <form action="#">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email Address" required>
-                <input type="tel" placeholder="Phone Number" required>
-                <select required>
-                    <option value="" disabled selected>Select Your Qualification</option>
-                    <option value="rn">Registered Nurse</option>
-                    <option value="cna">Certified Nurse Assistant</option>
-                </select>
-                <input type="text" placeholder="Years of Experience" required>
-                <textarea rows="4" placeholder="Brief summary of your background & certifications..." required></textarea>
+                
+                <input type="text" name="experience" placeholder="Years of Experience" required>
+                <textarea name="summary" rows="4" placeholder="Brief summary of your background & certifications..." required></textarea>
+                
                 <button type="submit">Submit Application</button>
             </form>
         </div>
+
     </div>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Afya Tele Healthcare. All rights reserved.</p>
     </footer>
