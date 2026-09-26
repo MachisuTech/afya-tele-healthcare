@@ -139,7 +139,7 @@
         /* Contact Details Grid */
         .contact-info {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
             text-align: center;
             margin-top: 1rem;
@@ -169,6 +169,7 @@
         footer a {
             color: #caf0f8;
             text-decoration: none;
+            margin: 0 0.5rem;
         }
     </style>
 </head>
@@ -221,8 +222,10 @@
             <div class="card" id="request-service">
                 <h3 style="text-align: center; margin-bottom: 1rem; color: #023e8a;">Request Nursing Services</h3>
                 <p style="text-align: center; margin-bottom: 1rem; font-size: 0.95rem;">Are you a patient or relative needing home healthcare services? Fill out the form below:</p>
-                <form action="https://formsubmit.co/info.afyatelehealthcare@gmail.com" method="POST">
-                    <input type="hidden" name="_subject" value="New Patient Care Request - Afya Tele">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+                    <input type="hidden" name="subject" value="New Patient Care Request - Afya Tele">
+                    
                     <input type="text" name="applicant_name" placeholder="Your Full Name" required>
                     <input type="text" name="patient_name" placeholder="Patient's Name (if applying for a relative)">
                     <select name="relationship" required>
@@ -252,8 +255,10 @@
             <div class="card" id="join-team">
                 <h3 style="text-align: center; margin-bottom: 1rem; color: #023e8a;">Join Our Healthcare Team</h3>
                 <p style="text-align: center; margin-bottom: 1rem; font-size: 0.95rem;">Are you a qualified nurse or healthcare practitioner? Apply to join our network:</p>
-                <form action="https://formsubmit.co/info.afyatelehealthcare@gmail.com" method="POST">
-                    <input type="hidden" name="_subject" value="New Nurse Application - Afya Tele">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+                    <input type="hidden" name="subject" value="New Nurse Application - Afya Tele">
+                    
                     <input type="text" name="fullname" placeholder="Full Name" required>
                     <input type="email" name="email" placeholder="Email Address" required>
                     <input type="tel" name="phone" placeholder="Phone Number" required>
@@ -292,6 +297,10 @@
                     <h4>Follow Us on X</h4>
                     <p><a href="https://x.com/AfyaHealthCareK?s=20" target="_blank">@AfyaHealthCareK</a></p>
                 </div>
+                <div class="contact-item">
+                    <h4>LinkedIn</h4>
+                    <p><a href="https://ke.linkedin.com/in/afya-tele-healthcare-a7850543a" target="_blank">Afya Tele Healthcare</a></p>
+                </div>
             </div>
         </div>
 
@@ -301,7 +310,9 @@
     <footer>
         <p>&copy; 2026 Afya Tele Healthcare. All rights reserved.</p>
         <p style="margin-top: 0.5rem; font-size: 0.9rem;">
-            Follow us on <a href="https://x.com/AfyaHealthCareK?s=20" target="_blank">X (Twitter)</a>
+            Connect with us on 
+            <a href="https://x.com/AfyaHealthCareK?s=20" target="_blank">X (Twitter)</a> | 
+            <a href="https://ke.linkedin.com/in/afya-tele-healthcare-a7850543a" target="_blank">LinkedIn</a>
         </p>
     </footer>
 
